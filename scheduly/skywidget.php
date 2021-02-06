@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Scheduly - Appointments
+ * Plugin Name: Scheduly - Appointment Scheduling System & Booking Calendar
  * Plugin URI: https://scheduly.com
  * Description: Let clients book appointments and make payments through your website. Lightweight and powerful.
  * Version: 1.0.0
