@@ -52,7 +52,7 @@ if (!class_exists('schedulyWidgetBookings')) {
 
             if(isset($_POST) && !empty($_POST['schedulyInsertFooter'])) {
                 $schedulyInsertFooter = sanitize_text_field($_POST['schedulyInsertFooter']);
-                    $url = 'https://scheduly.com/api/V_1/plugin/checkClientIdjajajaj/'.$schedulyInsertFooter.'';
+                    $url = 'https://scheduly.com/api/V_1/plugin/checkClientId/'.$schedulyInsertFooter.'';
                     $response = wp_remote_get($url, 
                     array(
                         'blocking' => true,
@@ -140,7 +140,7 @@ if (!class_exists('schedulyWidgetBookings')) {
         }
 
         $schedulyCurrentData = get_post_meta($schedulyPostId, '_inpost_head_script', TRUE);
-        $schedulyNewData = $_POST['_inpost_head_script'];
+        $schedulyNewData = sanitize_text_field($_POST['_inpost_head_script']);
         schedulyPostMetaClean($schedulyNewData);
         
         if ($schedulyCurrentData) {
